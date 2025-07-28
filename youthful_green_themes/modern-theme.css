@@ -1,0 +1,507 @@
+/* 卡片基础样式 - 青春绿 */
+.youthful-green {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  color: #333333;
+  line-height: 1.8;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* 卡片内容区域 - 注意：此规则不带主题类名限定 */
+.card-content-inner {
+  padding: 24px;
+}
+
+/* --- 标题样式 --- */
+
+/* 一级标题 - 现代卡片样式 */
+.card-content-inner h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00B25A 0%, #00D67A 100%);
+  padding: 16px 32px;
+  margin: 32px auto 28px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-radius: 12px;
+  display: block;
+  width: fit-content;
+  border: none;
+}
+
+/* 二级标题 - 居中显示带背景 */
+.card-content-inner h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #00B25A;
+  padding: 12px 28px;
+  margin: 28px auto 20px;
+  line-height: 1.4;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 6px 16px rgba(0, 178, 90, 0.25);
+  display: block;
+  width: fit-content;
+  border: none;
+}
+
+/* 三级标题 - 左侧边框突出 */
+.card-content-inner h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00B25A;
+  border-left: 5px solid #00B25A;
+  padding: 8px 0 8px 16px;
+  margin: 28px 0 18px 0;
+  line-height: 1.4;
+  background-color: rgba(0, 178, 90, 0.08);
+  border-radius: 0 8px 8px 0;
+}
+
+/* 四级标题 - 简洁样式 */
+.card-content-inner h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #00B25A;
+  margin: 24px 0 16px 0;
+  padding-left: 12px;
+  position: relative;
+}
+
+/* 四级标题前的装饰元素 */
+.card-content-inner h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #00B25A;
+  border-radius: 50%;
+}
+
+/* --- 段落样式 --- */
+.card-content-inner p {
+  margin: 16px 0;
+  line-height: 1.8;
+  color: #333333;
+  font-size: 16px;
+}
+
+/* --- 文本格式 --- */
+
+/* 加粗文本 */
+.card-content-inner strong,
+.card-content-inner b {
+  color: #00B25A;
+  font-weight: 700;
+  padding: 0 2px;
+}
+
+/* 斜体文本 */
+.card-content-inner em,
+.card-content-inner i {
+  font-style: italic;
+  color: #555555;
+}
+
+/* 下划线文本 */
+.card-content-inner u {
+  text-decoration: none;
+  border-bottom: 2px solid #00B25A;
+  padding-bottom: 2px;
+}
+
+/* 删除线文本 */
+.card-content-inner del {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+/* 高亮文本 */
+.card-content-inner mark {
+  background-color: rgba(0, 178, 90, 0.15) !important;
+  color: #333333 !important;
+  padding: 3px 6px !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: transparent !important;
+  text-underline-offset: 0 !important;
+  text-decoration-thickness: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 针对可能的波浪线类名进行覆盖 */
+.card-content-inner .wavy-underline {
+  background-color: rgba(0, 178, 90, 0.15) !important;
+  color: #333333 !important;
+  padding: 3px 6px !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: transparent !important;
+  text-underline-offset: 0 !important;
+  text-decoration-thickness: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 引用块 */
+.card-content-inner blockquote {
+  margin: 10px 0;
+  padding: 6px 20px;
+  background-color: #f8f9fa;
+  border-left: 3px solid #cccccc;
+  color: #555555;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.8;
+}
+
+/* 引用块内的段落样式重置 */
+.card-content-inner blockquote p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* --- 列表样式 --- */
+
+/* 无序列表容器 */
+.card-content-inner ul {
+  list-style: none;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px 16px 16px 20px;
+  margin: 16px 0;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* 无序列表项 */
+.card-content-inner ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* 清除最后一个列表项的底部边距 */
+.card-content-inner ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* 无序列表项目符号 */
+.card-content-inner ul li::before {
+  content: "•";
+  color: #00B25A;
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+/* 有序列表容器 */
+.card-content-inner ol {
+  list-style: none;
+  counter-reset: item;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px 16px 16px 20px;
+  margin: 16px 0;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* 有序列表项 */
+.card-content-inner ol li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  counter-increment: item;
+}
+
+/* 清除最后一个列表项的底部边距 */
+.card-content-inner ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* 有序列表项目符号 */
+.card-content-inner ol li::before {
+  content: counter(item) ".";
+  color: #00B25A;
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* 列表内段落边距重置 */
+.card-content-inner ul li > p,
+.card-content-inner ol li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* --- 代码样式 --- */
+
+/* 行内代码 */
+.card-content-inner code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  background-color: #f1f3f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #00B25A;
+}
+
+/* 代码块 - Mac风格 */
+.card-content-inner pre {
+  margin: 20px 0;
+  border-radius: 8px;
+  background-color: #2c2c2c;
+  padding: 36px 16px 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* 使用多个背景图片模拟Mac按钮，确保公众号兼容性 */
+  background-image: 
+    radial-gradient(circle 6px at 20px 18px, #ff5f56 6px, transparent 6px),
+    radial-gradient(circle 6px at 40px 18px, #ffbd2e 6px, transparent 6px),
+    radial-gradient(circle 6px at 60px 18px, #27c93f 6px, transparent 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* 公众号模式下的代码块兼容样式 */
+.card-content-inner pre {
+  /* 添加重要性声明确保样式生效 */
+  background-image: 
+    radial-gradient(circle 6px at 20px 18px, #ff5f56 6px, transparent 6px),
+    radial-gradient(circle 6px at 40px 18px, #ffbd2e 6px, transparent 6px),
+    radial-gradient(circle 6px at 60px 18px, #27c93f 6px, transparent 6px) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* 代码块内的代码 */
+.card-content-inner pre code {
+  display: block;
+  color: #f8f8f2;
+  background-color: transparent;
+  padding: 0;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+/* --- 分割线 --- */
+.card-content-inner hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, rgba(0, 178, 90, 0.2), rgba(0, 178, 90, 0.6), rgba(0, 178, 90, 0.2));
+  margin: 24px 0;
+}
+
+/* --- 链接样式 --- */
+.card-content-inner a {
+  color: #00B25A;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 178, 90, 0.3);
+  transition: all 0.2s ease;
+}
+
+.card-content-inner a:hover {
+  color: #00D67A;
+  border-bottom-color: #00D67A;
+}
+
+/* --- 图片样式 --- */
+.card-content-inner img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 16px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- 表格样式 --- */
+/* 表格容器 - 支持横向滚动 */
+.card-content-inner .table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  /* 移动端滚动优化 */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 178, 90, 0.3) transparent;
+}
+
+/* 自定义滚动条样式 */
+.card-content-inner .table-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.card-content-inner .table-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+.card-content-inner .table-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 178, 90, 0.3);
+  border-radius: 3px;
+}
+
+.card-content-inner .table-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 178, 90, 0.5);
+}
+
+.card-content-inner table {
+  width: auto;
+  min-width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  table-layout: auto;
+  border: 1px solid #e9ecef;
+}
+
+.card-content-inner th {
+  background-color: #f1f3f5;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #333333;
+  border-bottom: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  white-space: nowrap;
+}
+
+.card-content-inner th:last-child {
+  border-right: none;
+}
+
+.card-content-inner td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  white-space: nowrap;
+}
+
+.card-content-inner td:last-child {
+  border-right: none;
+}
+
+.card-content-inner tr:last-child td {
+  border-bottom: none;
+}
+
+.card-content-inner tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* --- 公众号模式兼容样式 --- */
+
+/*
+  说明:
+  公众号模式下，平台会重构列表的HTML结构为：
+  <section class="list unordered">
+    <section class="list-item">
+      <section class="prefix">•</section>
+      <section class="content">内容</section>
+    </section>
+  </section>
+  
+  以下样式针对这种新结构进行适配。
+*/
+
+/* 公众号模式下的列表容器样式 */
+.card-content-inner .list.unordered {
+  background-color: #f8f9fa !important;
+  border-radius: 8px !important;
+  padding: 16px 16px 16px 20px !important;
+  margin: 16px 0 !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 公众号模式下的列表项样式 */
+.card-content-inner .list.unordered .list-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-bottom: 12px !important;
+  line-height: 1.6 !important;
+}
+
+/* 清除公众号模式下最后一个无序列表项的底部边距 */
+.card-content-inner .list.unordered .list-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* 公众号模式下的项目符号样式 */
+.card-content-inner .list.unordered .list-item .prefix {
+  color: #00B25A !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  margin-right: 8px !important;
+  flex-shrink: 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* 公众号模式下的列表内容样式 */
+.card-content-inner .list.unordered .list-item .content {
+  flex: 1 !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 公众号模式下有序列表的样式 */
+.card-content-inner .list.ordered {
+  background-color: #f8f9fa !important;
+  border-radius: 8px !important;
+  padding: 16px 16px 16px 20px !important;
+  margin: 16px 0 !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.card-content-inner .list.ordered .list-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-bottom: 12px !important;
+  line-height: 1.6 !important;
+}
+
+/* 清除公众号模式下最后一个有序列表项的底部边距 */
+.card-content-inner .list.ordered .list-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+.card-content-inner .list.ordered .list-item .prefix {
+  color: #00B25A !important;
+  font-weight: 600 !important;
+  margin-right: 8px !important;
+  flex-shrink: 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* 修复公众号模式下有序列表数字后缺少点号的问题 */
+.card-content-inner .list.ordered .list-item .prefix::after {
+  content: "." !important;
+}
+
+.card-content-inner .list.ordered .list-item .content {
+  flex: 1 !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
