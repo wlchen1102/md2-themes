@@ -23,7 +23,7 @@
   font-weight: 700;
   color: #ffffff;
   background: linear-gradient(135deg, #00B25A 0%, #00D67A 100%);
-  padding: 16px 32px;
+  padding: 14px 32px;
   margin: 32px auto 28px;
   line-height: 1.4;
   text-align: center;
@@ -40,7 +40,7 @@
   font-weight: 700;
   color: #ffffff;
   background: #00B25A;
-  padding: 12px 28px;
+  padding: 10px 28px;
   margin: 28px auto 20px;
   line-height: 1.4;
   text-align: center;
@@ -131,7 +131,7 @@
   color: #333333 !important;
   padding: 3px 6px !important;
   border-radius: 4px !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   text-decoration: none !important;
   text-decoration-style: none !important;
   text-decoration-color: transparent !important;
@@ -147,7 +147,7 @@
   color: #333333 !important;
   padding: 3px 6px !important;
   border-radius: 4px !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   text-decoration: none !important;
   text-decoration-style: none !important;
   text-decoration-color: transparent !important;
@@ -330,8 +330,11 @@
 /* --- 分割线 --- */
 .card-content-inner hr {
   border: 0;
-  height: 1px;
-  background: linear-gradient(to right, rgba(0, 178, 90, 0.2), rgba(0, 178, 90, 0.6), rgba(0, 178, 90, 0.2));
+  height: 10px;
+  background: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 10'%3E%3Cpath d='M0 5 Q10 1 20 5 T40 5' stroke='%2300B25A' stroke-width='1.5' fill='none' opacity='0.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
   margin: 24px 0;
 }
 
