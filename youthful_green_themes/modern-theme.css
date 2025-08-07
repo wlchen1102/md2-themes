@@ -330,12 +330,10 @@
 /* --- 分割线 --- */
 .card-content-inner hr {
   border: 0;
-  height: 10px;
-  background: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 10'%3E%3Cpath d='M0 5 Q10 1 20 5 T40 5' stroke='%2300B25A' stroke-width='1.5' fill='none' opacity='0.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: center;
-  margin: 24px 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00B25A, transparent);
+  margin: 28px 0;
+  opacity: 0.8;
 }
 
 /* --- 链接样式 --- */
