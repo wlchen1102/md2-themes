@@ -188,6 +188,20 @@
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
 }
 
+/* 嵌套无序列表 - 移除背景和边框 */
+.card-content-inner ul ul,
+.card-content-inner ul .list.unordered,
+.card-content-inner .list.unordered ul,
+.card-content-inner .list.unordered .list.unordered {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 0 0 10px !important;
+  margin: 8px 0 !important;
+  box-shadow: none !important;
+}
+
+
+
 /* 无序列表项 */
 .card-content-inner ul li,
 .card-content-inner .list.unordered .list-item {
@@ -231,6 +245,38 @@
   margin: 16px 0 !important;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
 }
+
+/* 嵌套有序列表 - 移除背景和边框 */
+.card-content-inner ol ol,
+.card-content-inner ol .list.ordered,
+.card-content-inner .list.ordered ol,
+.card-content-inner .list.ordered .list.ordered {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 0 0 10px !important;
+  margin: 8px 0 !important;
+  box-shadow: none !important;
+}
+
+
+
+/* 混合嵌套列表 - 移除背景和边框 */
+.card-content-inner ul ol,
+.card-content-inner ol ul,
+.card-content-inner ul .list.ordered,
+.card-content-inner ol .list.unordered,
+.card-content-inner .list.unordered ol,
+.card-content-inner .list.ordered ul,
+.card-content-inner .list.unordered .list.ordered,
+.card-content-inner .list.ordered .list.unordered {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 0 0 10px !important;
+  margin: 8px 0 !important;
+  box-shadow: none !important;
+}
+
+
 
 /* 有序列表项 */
 .card-content-inner ol li,
@@ -293,8 +339,10 @@
   background-color: #2c2c2c;
   padding: 36px 16px 16px;
   position: relative;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: visible;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  white-space: pre !important; /* 确保pre元素也保持原始格式 */
   /* 使用多个背景图片模拟Mac按钮，确保公众号兼容性 */
   background-image: 
     radial-gradient(circle 6px at 20px 18px, #ff5f56 6px, transparent 6px),
@@ -313,6 +361,9 @@
     radial-gradient(circle 6px at 60px 18px, #27c93f 6px, transparent 6px) !important;
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
+  white-space: pre !important; /* 公众号模式下也保持原始格式 */
+  overflow-x: auto !important;
+  overflow-y: visible !important;
 }
 
 /* 代码块内的代码 */
@@ -325,6 +376,8 @@
   font-size: 14px;
   line-height: 1.6;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  white-space: pre !important; /* 保持原始格式，包括换行符和空格 */
+  overflow-wrap: normal !important; /* 防止自动换行破坏代码格式 */
 }
 
 /* --- 分割线 --- */
@@ -355,6 +408,7 @@
   border-radius: 8px;
   margin: 16px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid #00B25A;
 }
 
 /* --- 表格样式 --- */
@@ -487,6 +541,19 @@
   padding: 0 !important;
 }
 
+/* 公众号模式下的嵌套列表 - 移除背景和边框 */
+.card-content-inner .list.unordered .list.unordered,
+.card-content-inner .list.ordered .list.ordered,
+.card-content-inner .list.unordered .list.ordered,
+.card-content-inner .list.ordered .list.unordered {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 0 0 10px !important;
+  margin: 8px 0 !important;
+  box-shadow: none !important;
+}
+
+
 /* 公众号模式下有序列表的样式 */
 .card-content-inner .list.ordered {
   background-color: #f8f9fa !important;
@@ -526,4 +593,42 @@
   line-height: 1.6 !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+/* === 嵌套列表项缩进减少规则 - 必须放在最后以覆盖原始样式 === */
+
+/* 嵌套无序列表项 - 减少缩进 */
+.card-content-inner ul ul li,
+.card-content-inner ul .list.unordered .list-item,
+.card-content-inner .list.unordered ul li,
+.card-content-inner .list.unordered .list.unordered .list-item {
+  padding-left: 14px !important;
+}
+
+/* 嵌套有序列表项 - 减少缩进 */
+.card-content-inner ol ol li,
+.card-content-inner ol .list.ordered .list-item,
+.card-content-inner .list.ordered ol li,
+.card-content-inner .list.ordered .list.ordered .list-item {
+  padding-left: 14px !important;
+}
+
+/* 混合嵌套列表项 - 减少缩进 */
+.card-content-inner ul ol li,
+.card-content-inner ol ul li,
+.card-content-inner ul .list.ordered .list-item,
+.card-content-inner ol .list.unordered .list-item,
+.card-content-inner .list.unordered ol li,
+.card-content-inner .list.ordered ul li,
+.card-content-inner .list.unordered .list.ordered .list-item,
+.card-content-inner .list.ordered .list.unordered .list-item {
+  padding-left: 14px !important;
+}
+
+/* 公众号模式下的嵌套列表项 - 减少缩进 */
+.card-content-inner .list.unordered .list.unordered .list-item,
+.card-content-inner .list.ordered .list.ordered .list-item,
+.card-content-inner .list.unordered .list.ordered .list-item,
+.card-content-inner .list.ordered .list.unordered .list-item {
+  padding-left: 14px !important;
 }
